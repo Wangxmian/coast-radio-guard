@@ -1,0 +1,46 @@
+server:
+  port: 18080
+
+spring:
+  application:
+    name: coast-radio-guard-backend
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/coast_radio_guard?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_general_ci
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+
+logging:
+  level:
+    com.coast.radio.guard: info
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+
+app:
+  jwt:
+    secret: coast-radio-guard-dev-secret-key-at-least-32-chars
+    expire-seconds: 7200
+
+ai:
+  base-url: http://127.0.0.1:8000
+  se-path: /se/enhance
+  asr-path: /asr/transcribe
+  realtime-asr-path: /realtime/transcribe
+  llm-path: /llm/analyze
+  llm-correction-path: /llm/correct
+  timeout-millis: 30000

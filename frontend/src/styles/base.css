@@ -1,0 +1,112 @@
+:root {
+  --crg-color-primary: #164972;
+  --crg-color-primary-soft: #eaf2f8;
+  --crg-color-success: #1e8e5a;
+  --crg-color-warning: #d3861f;
+  --crg-color-danger: #c63636;
+  --crg-color-info: #4f5f73;
+
+  --crg-text-main: #122338;
+  --crg-text-secondary: #5a6b7f;
+  --crg-text-muted: #7e8c9b;
+
+  --crg-bg-page: #f3f6fa;
+  --crg-bg-card: #ffffff;
+  --crg-bg-sidebar: #0f2133;
+  --crg-bg-sidebar-soft: #1a3148;
+
+  --crg-border-color: #dbe3eb;
+  --crg-border-soft: #eaf0f6;
+
+  --crg-radius-sm: 8px;
+  --crg-radius-md: 12px;
+  --crg-radius-lg: 16px;
+
+  --crg-shadow-card: 0 8px 24px rgba(15, 35, 51, 0.06);
+  --crg-shadow-soft: 0 2px 10px rgba(15, 35, 51, 0.05);
+
+  --crg-space-1: 8px;
+  --crg-space-2: 12px;
+  --crg-space-3: 16px;
+  --crg-space-4: 20px;
+  --crg-space-5: 24px;
+  --crg-space-6: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: var(--crg-text-main);
+  background: radial-gradient(circle at 2% 0%, #d7e3ef 0, rgba(215, 227, 239, 0) 30%), var(--crg-bg-page);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.crg-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--crg-space-4);
+}
+
+.crg-grid {
+  display: grid;
+  gap: var(--crg-space-3);
+}
+
+.crg-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.crg-muted {
+  color: var(--crg-text-muted);
+}
+
+.crg-strong {
+  font-weight: 600;
+}
+
+.el-card {
+  border-radius: var(--crg-radius-md);
+  border: 1px solid var(--crg-border-soft);
+  box-shadow: var(--crg-shadow-soft);
+}
+
+.el-table {
+  --el-table-header-bg-color: #f7fafd;
+  --el-table-border-color: var(--crg-border-color);
+  --el-table-row-hover-bg-color: #f4f8fc;
+  border-radius: var(--crg-radius-sm);
+  overflow: hidden;
+}
+
+.el-table th.el-table__cell {
+  color: #405266;
+  font-weight: 600;
+}
+
+.el-table td.el-table__cell {
+  color: var(--crg-text-main);
+}
+
+.el-dialog {
+  border-radius: var(--crg-radius-md);
+}
+
+@media (max-width: 960px) {
+  .crg-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
