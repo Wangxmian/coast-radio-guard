@@ -7,8 +7,15 @@
 正式环境中的核心模型、训练数据及相关算法策略属于未开源内容，不在本仓库中提供。
 
 请勿将本项目中的模型或结果用于生产环境或实际业务决策。
-[▶ 点击查看演示视频](video.mp4)
-<video controls src="video.mp4" title="Title"></video>
+
+![alt text](img/image.png)
+![alt text](<img/image copy.png>)
+![alt text](<img/image copy 2.png>)
+![alt text](<img/image copy 3.png>)
+![alt text](<img/image copy 4.png>)
+![alt text](<img/image copy 5.png>)
+![alt text](<img/image copy 6.png>)
+
 
 ## 核心能力
 
